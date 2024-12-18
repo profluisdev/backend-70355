@@ -1,0 +1,202 @@
+[
+  {
+    "title": "Camiseta Deportiva",
+    "description": "Camiseta de alta calidad para deportes.",
+    "price": 25.99,
+    "thumbnail": ["img1.jpg", "img2.jpg"],
+    "code": "CD001",
+    "stock": 150,
+    "category": "Ropa",
+    "status": true
+  },
+  {
+    "title": "Zapatillas Running",
+    "description": "Zapatillas cómodas para correr largas distancias.",
+    "price": 75.50,
+    "thumbnail": ["img3.jpg", "img4.jpg"],
+    "code": "ZR002",
+    "stock": 80,
+    "category": "Calzado",
+    "status": true
+  },
+  {
+    "title": "Raqueta de Tenis",
+    "description": "Raqueta ligera y resistente.",
+    "price": 120.00,
+    "thumbnail": ["img5.jpg", "img6.jpg"],
+    "code": "RT003",
+    "stock": 30,
+    "category": "Deportes",
+    "status": true
+  },
+  {
+    "title": "Mochila de Montaña",
+    "description": "Mochila con múltiples compartimentos.",
+    "price": 45.99,
+    "thumbnail": ["img7.jpg", "img8.jpg"],
+    "code": "MM004",
+    "stock": 60,
+    "category": "Accesorios",
+    "status": true
+  },
+  {
+    "title": "Botella de Agua",
+    "description": "Botella reutilizable de acero inoxidable.",
+    "price": 15.50,
+    "thumbnail": ["img9.jpg", "img10.jpg"],
+    "code": "BA005",
+    "stock": 200,
+    "category": "Accesorios",
+    "status": true
+  },
+  {
+    "title": "Pantalones de Senderismo",
+    "description": "Pantalones resistentes al agua y al viento.",
+    "price": 55.00,
+    "thumbnail": ["img11.jpg", "img12.jpg"],
+    "code": "PS006",
+    "stock": 70,
+    "category": "Ropa",
+    "status": true
+  },
+  {
+    "title": "Gorra Deportiva",
+    "description": "Gorra transpirable y ligera.",
+    "price": 10.99,
+    "thumbnail": ["img13.jpg", "img14.jpg"],
+    "code": "GD007",
+    "stock": 120,
+    "category": "Accesorios",
+    "status": true
+  },
+  {
+    "title": "Guantes de Ciclismo",
+    "description": "Guantes acolchados para mayor comodidad.",
+    "price": 20.00,
+    "thumbnail": ["img15.jpg", "img16.jpg"],
+    "code": "GC008",
+    "stock": 90,
+    "category": "Accesorios",
+    "status": true
+  },
+  {
+    "title": "Camiseta Casual",
+    "description": "Camiseta de algodón para uso diario.",
+    "price": 18.50,
+    "thumbnail": ["img17.jpg", "img18.jpg"],
+    "code": "CC009",
+    "stock": 140,
+    "category": "Ropa",
+    "status": true
+  },
+  {
+    "title": "Sandalias de Playa",
+    "description": "Sandalias cómodas para la playa.",
+    "price": 22.00,
+    "thumbnail": ["img19.jpg", "img20.jpg"],
+    "code": "SP010",
+    "stock": 100,
+    "category": "Calzado",
+    "status": true
+  },
+  {
+    "title": "Reloj Deportivo",
+    "description": "Reloj con funciones avanzadas para deporte.",
+    "price": 199.99,
+    "thumbnail": ["img21.jpg", "img22.jpg"],
+    "code": "RD011",
+    "stock": 50,
+    "category": "Accesorios",
+    "status": true
+  },
+  {
+    "title": "Sudadera con Capucha",
+    "description": "Sudadera cómoda y abrigada.",
+    "price": 35.00,
+    "thumbnail": ["img23.jpg", "img24.jpg"],
+    "code": "SC012",
+    "stock": 75,
+    "category": "Ropa",
+    "status": true
+  },
+  {
+    "title": "Balón de Fútbol",
+    "description": "Balón de alta calidad para partidos.",
+    "price": 25.00,
+    "thumbnail": ["img25.jpg", "img26.jpg"],
+    "code": "BF013",
+    "stock": 90,
+    "category": "Deportes",
+    "status": true
+  },
+  {
+    "title": "Calcetines Deportivos",
+    "description": "Calcetines cómodos y transpirables.",
+    "price": 8.99,
+    "thumbnail": ["img27.jpg", "img28.jpg"],
+    "code": "CD014",
+    "stock": 200,
+    "category": "Accesorios",
+    "status": true
+  },
+  {
+    "title": "Shorts de Running",
+    "description": "Shorts ligeros para correr.",
+    "price": 19.99,
+    "thumbnail": ["img29.jpg", "img30.jpg"],
+    "code": "SR015",
+    "stock": 100,
+    "category": "Ropa",
+    "status": true
+  },
+  {
+    "title": "Cinturón de Hidratación",
+    "description": "Cinturón con botellas de agua incluidas.",
+    "price": 30.00,
+    "thumbnail": ["img31.jpg", "img32.jpg"],
+    "code": "CH016",
+    "stock": 60,
+    "category": "Accesorios",
+    "status": true
+  },
+  {
+    "title": "Pesas Ajustables",
+    "description": "Pesas con sistema de ajuste rápido.",
+    "price": 75.00,
+    "thumbnail": ["img33.jpg", "img34.jpg"],
+    "code": "PA017",
+    "stock": 50,
+    "category": "Deportes",
+    "status": true
+  },
+  {
+    "title": "Bolsa de Deporte",
+    "description": "Bolsa grande y resistente para deporte.",
+    "price": 40.00,
+    "thumbnail": ["img35.jpg", "img36.jpg"],
+    "code": "BD018",
+    "stock": 80,
+    "category": "Accesorios",
+    "status": true
+  },
+  {
+    "title": "Gafas de Sol Deportivas",
+    "description": "Gafas con protección UV y diseño deportivo.",
+    "price": 30.99,
+    "thumbnail": ["img37.jpg", "img38.jpg"],
+    "code": "GS019",
+    "stock": 120,
+    "category": "Accesorios",
+    "status": true
+  },
+  {
+    "title": "Chaleco Reflectante",
+    "description": "Chaleco para mayor visibilidad en la noche.",
+    "price": 15.00,
+    "thumbnail": ["img39.jpg", "img40.jpg"],
+    "code": "CR020",
+    "stock": 110,
+    "category": "Accesorios",
+    "status": true
+  }
+]
