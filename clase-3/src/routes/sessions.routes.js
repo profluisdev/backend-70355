@@ -1,17 +1,14 @@
 import { Router } from "express";
 import { userDao } from "../dao/mongo/user.dao.js";
+import { createHash, isValidPassword } from "../utils/hashPassword.js";
+import passport from "passport";
 
 const router = Router();
 
-router.post("/register", async (req, res) => {
+router.post("/register", passport.authenticate("register"),  async (req, res) => {
   try {
-      const userData = req.body;
-      const findUser = await userDao.getByEmail(userData.email);
-      if(findUser) return res.status(400).json({ status: "error", msg: "El usuario con el email ya existe"});
-
-      const user = await userDao.create(userData);
-
-      res.status(201).json({ status: "success", payload: user});
+  
+      res.status(201).json({ status: "success", payload: "Usuario Registrado"});
   } catch (error) {
     console.log(error);
     res.status(500).json({ status: "Erro", msg: "Error interno del servidor" });
@@ -19,19 +16,17 @@ router.post("/register", async (req, res) => {
   
 })
 
-router.post("/login", async (req, res) => {
+router.post("/login", passport.authenticate("login") , async (req, res) => {
   try {
-    const { email, password } = req.body;
-    const user = await userDao.getByEmail(email);
-    if(!user || user.password !== password) return res.status(401).json({status: "error", msg: "Email o password no válido"});
-
-    // Guardamos la información del usuario en la session
     req.session.user = {
-      email,
+      first_name: req.user.first_name,
+      last_name: req.user.last_name,
+      email: req.user.email,
+      age: req.user.age,
       role: "user"
     }
-
-    res.status(200).json({status: "success", payload: user})
+    
+    res.status(200).json({status: "success", payload: req.session.user})
     
   } catch (error) {
     console.log(error);
@@ -64,6 +59,24 @@ router.get("/logout", async (req, res) => {
     req.session.destroy();
 
     res.status(200).json({status: "success", payload: "Session cerrada"})
+    
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ status: "Erro", msg: "Error interno del servidor" });
+  }
+  
+})
+
+router.put("/restore-password", async (req, res) => {
+
+  try {
+
+    const {email, password} = req.body;
+    const user = await userDao.getByEmail(email);
+
+    await userDao.update(user._id, { password: createHash(password)})
+
+    res.status(200).json({status: "success", payload: "Password actualizado"})
     
   } catch (error) {
     console.log(error);
