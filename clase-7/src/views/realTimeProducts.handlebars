@@ -1,0 +1,23 @@
+{{! Formulario para agregar un producto }}
+<div class="d-flex p-5">
+
+  <form class="d-flex flex-column gap-2 m-3" id="addForm">
+    <input id="title" type="text" name="title" placeholder="Nombre del producto" />
+    <input id="price" type="text" name="price" placeholder="Precio del producto" />
+    <input id="description" type="text" name="description" placeholder="Descripción del producto" />
+    <button type="submit">Agregar producto</button>
+  </form>
+
+  {{! Formulario para eliminar un producto }}
+
+  <form class="d-flex flex-column gap-2 m-3" id="deleteForm">
+    <input id="id" type="text" name="id" placeholder="ID del producto" />
+    <button type="submit">Eliminar producto</button>
+  </form>
+</div>
+
+{{! Mostramos todos los productos que recibimos }}
+<div id="productsList"></div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>
