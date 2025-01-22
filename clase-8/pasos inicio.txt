@@ -1,0 +1,44 @@
+Instalar TypeScript y demás dependencias
+npm i -D typescript @types/node ts-node-dev rimraf
+
+Inicializar el archivo de configuración de TypeScript ( Se puede configurar al gusto)
+npx tsc --init --outDir dist/ --rootDir src
+
+Crear scripts para dev, build y start (Más sobre TS-Node-dev aquí)
+  "dev": "tsnd --respawn --clear src/app.ts",
+  "build": "rimraf ./dist && tsc",
+  "start": "npm run build && node dist/app.js"
+
+Dependencias
+TypeScript:
+
+Paquete: typescript
+Descripción: TypeScript es un superset de JavaScript que añade tipado estático opcional y otras características avanzadas. Este paquete instala el compilador de TypeScript (tsc), que convierte archivos TypeScript (.ts) en archivos JavaScript (.js).
+@types/node:
+
+Paquete: @types/node
+Descripción: Este paquete proporciona definiciones de tipos para Node.js, permitiendo que TypeScript reconozca las APIs de Node.js. Esto es útil para obtener autocompletado y verificación de tipos al escribir código que interactúa con Node.js.
+ts-node-dev:
+
+Paquete: ts-node-dev
+Descripción: ts-node-dev es una herramienta que combina ts-node y nodemon. ts-node permite ejecutar archivos TypeScript directamente sin necesidad de compilarlos a JavaScript primero. nodemon es una herramienta que reinicia automáticamente la aplicación cuando detecta cambios en el código fuente. ts-node-dev hace ambas cosas, lo que es muy útil para el desarrollo.
+rimraf:
+
+Paquete: rimraf
+Descripción: rimraf es una herramienta de eliminación de archivos y directorios que funciona de manera segura en todas las plataformas, similar a rm -rf en Unix. Se utiliza para limpiar directorios, como la carpeta dist en este caso.
+Inicializar el archivo de configuración de TypeScript
+Comando: npx tsc --init --outDir dist/ --rootDir src
+Descripción: Este comando inicializa un archivo de configuración de TypeScript (tsconfig.json). Los parámetros --outDir dist/ y --rootDir src especifican que los archivos compilados deben salir en el directorio dist y que los archivos fuente están en el directorio src.
+Scripts en package.json
+dev:
+
+Script: "dev": "tsnd --respawn --clear src/app.ts"
+Descripción: Este script usa ts-node-dev para iniciar la aplicación. --respawn reinicia la aplicación automáticamente cuando hay cambios en el código fuente, y --clear limpia la consola antes de cada reinicio. src/app.ts es el archivo principal de tu aplicación.
+build:
+
+Script: "build": "rimraf ./dist && tsc"
+Descripción: Este script primero elimina el directorio dist usando rimraf, y luego compila los archivos TypeScript a JavaScript usando el compilador tsc. El resultado de la compilación se coloca en el directorio dist.
+start:
+
+Script: "start": "npm run build && node dist/app.js"
+Descripción: Este script primero ejecuta el script build para compilar el código TypeScript, y luego usa Node.js para ejecutar el archivo compilado dist/app.js. Esto es útil para el entorno de producción donde quieres ejecutar el código compilado.
